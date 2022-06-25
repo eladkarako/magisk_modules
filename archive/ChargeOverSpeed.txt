@@ -1,0 +1,32 @@
+sleep 10
+chmod 777 /sys/class/power_supply/usb/*
+chmod 777 /sys/class/power_supply/battery/*
+chmod 777 /sys/class/power_supply/main/*
+chmod 777 /sys/class/power_supply/bms/*
+chmod 777 /sys/class/power_supply/pc_port/*
+chmod 777 /sys/class/power_supply/wireless/*
+chmod 777 /sys/class/qcom-battery/*
+chmod 777 /sys/class/power_supply/battery/step_charging_enabled
+while true; do
+echo '0' > /sys/class/power_supply/battery/step_charging_enabled
+echo '1' > /sys/class/power_supply/usb/pd_allowed
+echo '1' > /sys/class/power_supply/battery/subsystem/usb/pd_allowed
+echo '0' > /sys/class/power_supply/battery/input_current_limited
+echo '0' > /sys/class/qcom-battery/restricted_charging
+echo '150' > /sys/class/power_supply/bms/temp_cool
+echo '500' > /sys/class/power_supply/bms/temp_hot
+echo '500' > /sys/class/power_supply/bms/temp_warm
+echo '3100000' > /sys/class/power_supply/usb/current_max
+echo '3100000' > /sys/class/power_supply/usb/hw_current_max
+echo '3100000' > /sys/class/power_supply/usb/pd_current_max
+echo '3100000' > /sys/class/power_supply/usb/ctm_current_max
+echo '3100000' > /sys/class/power_supply/usb/sdp_current_max
+echo '3100000' > /sys/class/power_supply/main/current_max
+echo '3100000' > /sys/class/power_supply/main/constant_charge_current_max
+echo '3100000' > /sys/class/power_supply/battery/current_max
+echo '3100000' > /sys/class/power_supply/battery/constant_charge_current_max
+echo '3100000' > /sys/class/qcom-battery/restricted_current
+echo '3100000' > /sys/class/power_supply/pc_port/current_max
+echo '3100000' > /sys/class/power_supply/wireless/current_max
+sleep 1
+done

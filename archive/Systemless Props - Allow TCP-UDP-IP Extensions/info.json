@@ -1,0 +1,6 @@
+{
+ "name"               : "Systemless Props - Allow TCP-UDP-IP Extensions"
+,"description"        : "allow linux TCP-UDP-IP extensions to improve network stability"
+,"date_last_modified" : 0
+,"url_based_on"       : "https://gist.github.com/eladkarako/5694eada31277fdc75cee4043461372e/5bc786572479a4b570003b1a0f420cd63ae2ab44#file-tweaked_build-prop-L60-L96"
+}

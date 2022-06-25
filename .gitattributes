@@ -1,0 +1,27 @@
+#explicit binary - must - as is to prevent corruption.
+*.7z                      binary
+*.zip                     binary
+*.pdn                     binary
+*.png                     binary
+*.jpg                     binary
+
+#Linux-EOL - must - since additional '\r' corrupts parsing and execution by linux scripts.
+*.sh                      text    eol=lf
+*.prop                    text    eol=lf
+*update-binary*           text    eol=lf
+*updater-script*          text    eol=lf
+*.json                    text    eol=lf
+
+#Windows-EOL - must due to line-comments.
+*.cmd                     text    eol=crlf
+*.html                    text    eol=crlf
+*.js                      text    eol=crlf
+.gitattributes            text    eol=crlf
+.gitignore                text    eol=crlf
+README.md                         eol=crlf
+
+#Windows-EOL - ease of usage. does not matter.
+*.css                     text    eol=crlf
+*.nfo                     text    eol=crlf
+*.txt                     text    eol=crlf
+

@@ -1,0 +1,5 @@
+/data/data/berserker.android.apps.sshdroid/home # cat /sys/class/power_supply/battery/charging_source
+2
+/data/data/berserker.android.apps.sshdroid/home # echo 0.5 > /sys/class/power_supply/battery/charging_source
+/data/data/berserker.android.apps.sshdroid/home # cat /sys/class/power_supply/battery/charging_source
+2
